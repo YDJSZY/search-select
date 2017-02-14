@@ -9,11 +9,17 @@
 <div id="search-select"></div>
 <script type="text/javascript" src="search-select.js"></script>
 <script>
+    function getData() {
+        setTimeout(function () {
+            
+        },500)
+    }
     var config = {
-        targetEle:document.getElementById("search-select")
+        targetEle:document.getElementById("search-select"),
+        getData:getData
     }
     var searchSelect = new SearchSelect(config);
-    searchSelect.pushData([1,2,3,4,5])
+    searchSelect.pushData(["a","a","a","a","a","a","a","a","a","a"])
 </script>
 </body>
 </html>

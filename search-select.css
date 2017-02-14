@@ -44,3 +44,11 @@ div.select-container .search-panel .search-panel-ul li:hover{
     background: #ff6a6a;
     color: #ffffff;
 }
+
+div.select-container .loading-span{
+    width:20px;
+    height: 20px;
+    display: block;
+    margin:0 auto;
+    padding: 5px;
+}

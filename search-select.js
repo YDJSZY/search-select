@@ -22,6 +22,7 @@ SearchSelect.prototype.render = function () {
         var event = e || window.event;
         event.cancelBubble || event.stopPropagation();
         searchPanel.style.display = "block";
+        this.getData();
     };
     document.onclick = function (e) {
         var event = e || window.event;
@@ -35,6 +36,12 @@ SearchSelect.prototype.render = function () {
     this.searchPanelUl.setAttribute("class","search-panel-ul");
     searchPanel.appendChild(this.searchPanelUl);
     selectContainer.appendChild(searchPanel);
+    this.loadingSpan = document.createElement("span");
+    var loadingGif = document.createElement("img");
+    loadingGif.src = "./imgs/loading.gif";
+    this.loadingSpan.setAttribute("class","loading-span");
+    this.loadingSpan.appendChild(loadingGif);
+    searchPanel.appendChild(this.loadingSpan);
     this.targetEle.parentNode.replaceChild(selectContainer,this.targetEle);
 }
 
@@ -51,4 +58,8 @@ SearchSelect.prototype.pushData = function (data) {
         frag.appendChild(li)
     }
     this.searchPanelUl.appendChild(frag);
+}
+
+SearchSelect.prototype.getData = function () {
+    
 }
