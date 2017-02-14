@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="search-select.css" type="text/css">
+</head>
+<body>
+<div id="search-select"></div>
+<script type="text/javascript" src="search-select.js"></script>
+<script>
+    var config = {
+        targetEle:document.getElementById("search-select")
+    }
+    var searchSelect = new SearchSelect(config);
+    searchSelect.pushData([1,2,3,4,5])
+</script>
+</body>
+</html>
