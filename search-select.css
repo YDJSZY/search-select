@@ -38,6 +38,7 @@ div.select-container .search-panel .search-panel-ul{
 div.select-container .search-panel .search-panel-ul li{
     list-style: none;
     padding: 10px;
+    cursor: pointer;
 }
 
 div.select-container .search-panel .search-panel-ul li:hover{

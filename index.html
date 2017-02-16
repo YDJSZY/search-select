@@ -6,20 +6,42 @@
     <link rel="stylesheet" href="search-select.css" type="text/css">
 </head>
 <body>
-<div id="search-select"></div>
+<div style="width: 300px;">
+    <div id="search-select"></div>
+</div>
+<div style="width: 300px;margin-left: 400px">
+    <div id="search-selecti"></div>
+</div>
 <script type="text/javascript" src="search-select.js"></script>
 <script>
     function getData() {
         setTimeout(function () {
-            
+            searchSelect.pushData([{name:"luwenwei"},{name:"yuhuahui"}])
+        },500)
+    }
+    function getDatai() {
+        setTimeout(function () {
+            searchSelecti.pushData([{name:"luwenwei"},{name:"yuhuahui"}])
         },500)
     }
     var config = {
         targetEle:document.getElementById("search-select"),
-        getData:getData
+        getData:getData,
+        field:"name"
+    }
+    var configi = {
+        targetEle:document.getElementById("search-selecti"),
+        getData:getDatai,
+        field:"name"
     }
     var searchSelect = new SearchSelect(config);
-    searchSelect.pushData(["a","a","a","a","a","a","a","a","a","a"])
+    searchSelect.selectCallBack = function (data) {
+        console.log(data);
+    }
+    var searchSelecti = new SearchSelect(configi);
+    searchSelecti.selectCallBack = function (data) {
+        console.log(data);
+    }
 </script>
 </body>
 </html>
